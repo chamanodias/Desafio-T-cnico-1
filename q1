@@ -1,0 +1,23 @@
+function divi3or5(numero) {
+  let soma = 0;
+
+  for (let i = 1; i < numero; i++) {
+    if (i % 3 === 0 || i % 5 === 0) {
+      soma += i;
+    }
+  }
+
+  return soma;
+}
+
+const numeroEscolhido = prompt("Digite um número inteiro positivo:");
+
+if (numeroEscolhido === null || isNaN(numeroEscolhido) || numeroEscolhido <= 0) {
+  console.log("Por favor, insira um número inteiro positivo válido.");
+} else {
+
+  const numeroInteiro = parseInt(numeroEscolhido);
+
+  const resultado = divi3or5(numeroInteiro);
+  console.log(`O somatório dos números menores que ${numeroInteiro} e divisíveis por 3 ou 5 é: ${resultado}`);
+}
